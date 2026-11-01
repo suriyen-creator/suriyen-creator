@@ -38,9 +38,9 @@ bestz@ideapad:~$ fastfetch --brief
 ```
 
 ```text
-host:     IdeaPad Gaming 3 15IMH05 (Portable / Linux Testing)
-os:       CachyOS x86_64 (Linux 6.18 LTS)
-desktop:  KDE Plasma 6.8.2 · KWin (Wayland) · fish 4.9.3
+host:     IdeaPad Gaming 3 15IMH05 (Notebook / Dual Boot)
+os:       CachyOS x86_64 (Linux 6.18 LTS) / Windows 10 Home
+desktop:  KDE Plasma 6.8.2 · fish 4.9.3 · LazyVim
 hardware: Intel Core i5-10300H · NVIDIA GTX 1650 Ti Mobile · 16 GB RAM
 role:     Linux system testing, package management, mobile dev
 ```
@@ -52,7 +52,7 @@ PS C:\Users\suriy> fastfetch --brief
 ```text
 host:     A520M K V2 · DESKTOP-6T6SS8O (Primary Workstation)
 os:       Windows 10 Home (22H2) x86_64
-desktop:  Windows Rice · Antigravity IDE · PowerShell 5.1
+desktop:  Windows Rice · Antigravity IDE · Codex · Claude Code · PowerShell 5.1
 hardware: AMD Ryzen 5 5600X (12) · NVIDIA RTX 3070 (8 GB) · 32 GB RAM
 role:     Model training, edge vision inference, remote compute via Parsec
 ```
