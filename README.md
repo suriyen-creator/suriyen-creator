@@ -88,44 +88,67 @@ RAM     13.06 GiB / 31.92 GiB (41%)
 DISK    420.37 GiB / 465.11 GiB (90%)
 ```
 
+```bash
+suriyen@workstation:~$ cat /etc/workstation-roles.conf
+```
+
+```text
+[desktop-rig]
+host        = DESKTOP-6T6SS8O (AMD Ryzen 5 5600X · RTX 3070 8GB · 32GB RAM)
+role        = Primary workstation, AI model training, remote compute via Parsec
+environment = Windows 10 Home · PowerShell 5.1 · Antigravity IDE
+
+[portable-rig]
+host        = ideapad (Intel i5-10300H · GTX 1650 Ti · 16GB RAM)
+role        = Linux system testing, package management, mobile development
+environment = CachyOS x86_64 · KDE Plasma 6 (Wayland) · fish shell
+```
+
 ---
 
-### Environment and configuration
+### Desktop rice gallery
 
 ```bash
-suriyen@workstation:~$ cat ~/.config/rice/environment.json
+suriyen@workstation:~$ fbi --view ~/rice/screenshots/showcase.png
 ```
+
+<p align="center">
+  <a href="https://github.com/suriyen-creator/6e5tz_window_rice">
+    <img src="https://raw.githubusercontent.com/suriyen-creator/6e5tz_window_rice/main/screenshots/showcase.png" alt="TokyoNight Desktop Rice Showcase" width="100%" />
+  </a>
+</p>
 
 ```json
 {
-  "system_rice": {
-    "os_environments": [
-      "CachyOS Linux x86_64",
-      "Windows 10 Home"
+  "rice_profile": {
+    "theme": "TokyoNight Dark",
+    "base": "suriyen-creator/6e5tz_window_rice",
+    "utilities": [
+      "suriyen-creator/HideTaskbar",
+      "PowerShell 7 automation hooks"
     ],
-    "shell": "fish / PowerShell 7",
-    "ricing_projects": [
-      "suriyen-creator/6e5tz_window_rice",
-      "suriyen-creator/HideTaskbar"
-    ],
-    "subdomain_service": "https://runs-on.dev/",
-    "aesthetic": "TokyoNight Dark, Minimalist Cyber-Terminal"
+    "subdomain": "https://runs-on.dev/"
   }
 }
 ```
 
 ---
 
-### Languages and tools
+### Technical proficiency
 
 ```bash
-suriyen@workstation:~$ gh-stats --languages
+suriyen@workstation:~$ cat ~/skills/matrix.json
 ```
 
 ```text
-Python      [██████████████████████████████░░░░░░░░] 75.0%
-PowerShell  [███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 18.0%
-JavaScript  [███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]  7.0%
+Daily driver:
+  Python, PowerShell, fish, OpenCV, Streamlit, NumPy, Linux CLI
+
+Robotics & perception:
+  Dobot Magician API, Hikrobot MVS GigE, YOLOv8, Faster-Whisper (CPU INT8)
+
+Automation & web:
+  GitHub Actions, Windows Rice scripts, Subdomain DNS management (runs-on.dev)
 ```
 
 <p align="left">
@@ -137,7 +160,39 @@ JavaScript  [███░░░░░░░░░░░░░░░░░░░�
   <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" />
   <img src="https://img.shields.io/badge/Dobot%20Magician-FF6F00?style=flat-square&logo=robot&logoColor=white" alt="Dobot" />
   <img src="https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white" alt="PowerShell" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux" />
 </p>
+
+---
+
+### Exploring and roadmap
+
+```bash
+suriyen@workstation:~$ head -n 4 ~/notes/roadmap.txt
+```
+
+```text
+[~] ROS 2 (Robot Operating System) nodes for articulated robot arms
+[~] Edge AI model quantization with ONNX Runtime & TensorRT
+[~] Rust for high-throughput sensor telemetry and CLI tools
+[~] Real-time vision feedback loops on embedded Linux
+```
+
+---
+
+### System activity
+
+```bash
+suriyen@workstation:~$ tail -n 5 /var/log/system-activity.log
+```
+
+```text
+[2026-10-28] sys: updated CachyOS LTS kernel 6.18 on portable rig
+[2026-10-30] rice: refined HideTaskbar integration in 6e5tz_window_rice
+[2026-11-01] dns: verified runs-on.dev subdomain routing endpoints
+[2026-11-02] sync: streamlined dual-environment workflow across Linux and Windows
+[2026-11-02] docs: updated developer profile telemetry and workstation roles
+```
 
 ---
 
