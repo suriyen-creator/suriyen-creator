@@ -25,39 +25,72 @@ Developer:    SURIYEN (6e5tz)
 Role:         AI / Machine Learning & Robotics Developer
 Hardware:     Dobot Magician (4-DOF Arm) · Hikrobot Industrial Camera (MVS SDK)
 Perception:   YOLOv8 · Faster-Whisper (Offline CPU INT8) · OpenCV · Scikit-Learn · Gemini API
-Stack:        Python · PowerShell · Streamlit · NumPy · Windows Rice
+Stack:        Python · PowerShell · Linux · Streamlit · NumPy
 Personal Web: https://6e5tz.runs-on.dev
 ```
 
 ---
 
-### 📡 Active Hardware & Vision Pipelines
+### Workstations
 
 ```bash
-suriyen@workstation:~$ ./inspect_hardware_pipelines.sh --verbose
+bestz@ideapad:~$ fastfetch
 ```
 
-* **[SYS_01] Glass Defect Sorting System** — [`suriyen-creator/glass-defect-sorting-system`](https://github.com/suriyen-creator/glass-defect-sorting-system)
-  ```text
-  [Hikrobot MVS GigE] ──> [NumPy Frame Buffer] ──> [YOLOv8 Broken/NonBroken] ──> [Validation Gate] ──> [Dobot Suction Sort]
-  ```
-  *Solo vision-to-robot industrial pipeline coordinating camera buffer lifecycle with robotic arm pick-and-place waypoints.*
+```text
+bestz@ideapad
+-------------
+OS: CachyOS x86_64
+Host: 81Y4 (IdeaPad Gaming 3 15IMH05)
+Kernel: Linux 6.18.55-2-cachyos-lts
+Uptime: 3 mins
+Packages: 1297 (pacman)
+Shell: fish 4.9.3
+Display (BOE08E8): 1920x1080 in 16", 120 Hz [Built-in]
+Desktop Environment: KDE Plasma 6.8.2
+Window Manager: KWin (Wayland)
+WM Theme: Graphite-dark-round
+Theme: Breeze (Scratchy) [Qt], Breeze-Dark [GTK2], Breeze [GTK3]
+Icons: Colloid-Dark [Qt], Colloid-Dark [GTK2/3/4]
+Font: Noto Sans (10pt) [Qt], Noto Sans (10pt) [GTK2/3/4]
+Cursor: capitaine (36px)
+Terminal: konsole 26.8.2
+CPU: Intel(R) Core(TM) i5-10300H (8) @ 4.50 GHz
+GPU 1: NVIDIA GeForce GTX 1650 Ti Mobile [Discrete]
+GPU 2: Intel UHD Graphics @ 1.05 GHz [Integrated]
+Memory: 2.30 GiB / 15.48 GiB (15%)
+Swap: 5.10 MiB / 15.48 GiB (0%)
+Disk (/): 37.59 GiB / 176.00 GiB (21%) - btrfs
+Local IP (wlan0): 192.168.1.203/24
+Battery (L19M3PF7): 64% [AC Connected, Charging]
+Locale: en_US.UTF-8
+```
 
-* **[SYS_02] AI Voice Control for Dobot** — [`suriyen-creator/Dobot_Voice_Control`](https://github.com/suriyen-creator/Dobot_Voice_Control)
-  ```text
-  [Microphone (.wav)] ──> [Faster-Whisper (CPU INT8)] ──> [Thai/English Fuzzy Match] ──> [Action Dispatch] ──> [Arm Pose Replay]
-  ```
-  *Offline speech recognition running locally on CPU to execute 11 command pairs without cloud latency.*
+```powershell
+PS C:\Users\suriy> fastfetch
+```
 
-* **[SYS_03] AI Portfolio Reviewer** — [`suriyen-creator/ai-portfolio-reviewer`](https://github.com/suriyen-creator/ai-portfolio-reviewer) · [Live Streamlit App](https://ai-portfolio-reviewer-7romvlv56av4x9d2pcm3ar.streamlit.app)
-  ```text
-  [Resume PDF + GitHub API] ──> [Evidence Extraction] ──> [Google Gemini LLM] ──> [Streamlit Report]
-  ```
-  *Evidence-driven portfolio auditor cross-referencing resume claims with observable repository metadata.*
+```text
+USER    suriy@DESKTOP-6T6SS8O
+─────────────────────
+OS      Windows 10 Home (22H2) x86_64
+HOST    A520M K V2 (-CF)
+KER     WIN32_NT 10.0.19045.6466
+UP      28 mins
+SH      Windows PowerShell 5.1.19041.1
+DISP    1920x1080 @ 165Hz
+WM      
+TERM    Antigravity IDE 1.107.0.0
+CPU     AMD Ryzen 5 5600X (12) @ 4.65 GHz
+GPU     Parsec Cloud, Inc. Parsec Virtual Display Adapter
+GPU     NVIDIA GeForce RTX 3070 @ 2.10 GHz (7.83 GiB) [Discrete]
+RAM     13.06 GiB / 31.92 GiB (41%)
+DISK    420.37 GiB / 465.11 GiB (90%)
+```
 
 ---
 
-### 🖥️ Workstation & Rice Configuration
+### Environment and configuration
 
 ```bash
 suriyen@workstation:~$ cat ~/.config/rice/environment.json
@@ -66,21 +99,24 @@ suriyen@workstation:~$ cat ~/.config/rice/environment.json
 ```json
 {
   "system_rice": {
-    "os_environment": "Windows Rice & Custom Utilities",
-    "shell": "PowerShell 7 + Custom Rice Automation",
+    "os_environments": [
+      "CachyOS Linux x86_64",
+      "Windows 10 Home"
+    ],
+    "shell": "fish / PowerShell 7",
     "ricing_projects": [
       "suriyen-creator/6e5tz_window_rice",
       "suriyen-creator/HideTaskbar"
     ],
-    "subdomain_service": "https://runs-on.dev/ (creator & maintainer)",
-    "aesthetic": "TokyoNight Dark · Minimalist Cyber-Terminal · Physical Computing"
+    "subdomain_service": "https://runs-on.dev/",
+    "aesthetic": "TokyoNight Dark, Minimalist Cyber-Terminal"
   }
 }
 ```
 
 ---
 
-### 📊 Language Distribution & Technologies
+### Languages and tools
 
 ```bash
 suriyen@workstation:~$ gh-stats --languages
@@ -107,7 +143,7 @@ JavaScript  [███░░░░░░░░░░░░░░░░░░░�
 
 ```bash
 suriyen@workstation:~$ ping -c 1 6e5tz.runs-on.dev
-64 bytes from 6e5tz.runs-on.dev: icmp_seq=1 ttl=64 time=0.042 ms --- [HOST ONLINE]
+64 bytes from 6e5tz.runs-on.dev: icmp_seq=1 ttl=64 time=0.042 ms [HOST ONLINE]
 
 suriyen@workstation:~$ ./contact.sh --endpoints
 > Website:      https://6e5tz.runs-on.dev/
